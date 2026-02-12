@@ -403,9 +403,10 @@ nav {
 
 /* ═══ ROADMAP ═══ */
 .roadmap-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 2rem 0;
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; margin: 2rem 0;
 }
-@media (max-width: 768px) { .roadmap-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .roadmap-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .roadmap-grid { grid-template-columns: 1fr; } }
 .roadmap-card {
   padding: 2rem; border-radius: 14px;
   background: var(--bg-glass); border: 1px solid var(--border-subtle);
@@ -428,6 +429,42 @@ nav {
 }
 .roadmap-card li::before {
   content: '›'; position: absolute; left: 0; color: var(--crimson-bright); font-weight: 700;
+}
+
+/* ═══ FILM ═══ */
+.film-hero {
+  padding: 3rem; border-radius: 14px; margin: 2rem 0;
+  background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(198,40,40,0.06));
+  border: 1px solid var(--gold-muted);
+}
+.film-hero .film-icon {
+  font-size: 2.5rem; margin-bottom: 1rem;
+}
+.film-hero h3 {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem;
+  font-weight: 700; color: var(--text-bright); margin-bottom: 1rem;
+}
+.film-quote {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: 1.1rem; color: var(--gold-light); line-height: 1.6;
+  padding: 1.5rem 0; border-top: 2px solid var(--crimson);
+  border-bottom: 2px solid var(--gold-muted); margin: 1.5rem 0;
+}
+.film-pillars {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 2rem;
+}
+@media (max-width: 768px) { .film-pillars { grid-template-columns: repeat(2, 1fr); } }
+.film-pillar {
+  padding: 1.5rem; border-radius: 12px; text-align: center;
+  background: var(--bg-glass); border: 1px solid var(--border-subtle);
+}
+.film-pillar .pillar-icon { font-size: 1.8rem; margin-bottom: 0.6rem; }
+.film-pillar h4 {
+  font-family: 'Inter', sans-serif; font-weight: 700;
+  font-size: 0.85rem; color: var(--text-bright); margin-bottom: 0.5rem;
+}
+.film-pillar p {
+  font-size: 0.75rem; color: var(--text-secondary); line-height: 1.5;
 }
 
 /* ═══ CLOSING ═══ */
@@ -469,6 +506,7 @@ footer strong { color: var(--text-secondary); font-weight: 600; }
     <li><a href="#voice-journey"><span class="en">Science</span><span class="ru">Наука</span></a></li>
     <li><a href="#industry"><span class="en">Industry</span><span class="ru">Индустрия</span></a></li>
     <li><a href="#fest"><span class="en">GranatFest</span><span class="ru">GranatFest</span></a></li>
+    <li><a href="#film"><span class="en">Film</span><span class="ru">Фильм</span></a></li>
     <li><a href="#team"><span class="en">Team</span><span class="ru">Команда</span></a></li>
     <li>
       <div class="lang-toggle">
@@ -958,6 +996,62 @@ footer strong { color: var(--text-secondary); font-weight: 600; }
 </section>
 
 <!-- ═══════════════════════════════════════════
+     THE FILM
+     ═══════════════════════════════════════════ -->
+<section id="film">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label"><span class="en">The Film</span><span class="ru">Фильм</span></div>
+      <h2 class="section-title">
+        <span class="en">A Documentary About Creating the Artifact</span>
+        <span class="ru">Документальный фильм о создании артефакта</span>
+      </h2>
+    </div>
+
+    <div class="film-hero reveal">
+      <div class="film-icon">&#127902;</div>
+      <h3><span class="en">A boy travels across five continents</span><span class="ru">Мальчик путешествует по пяти континентам</span></h3>
+      <p style="color:var(--text-secondary);line-height:1.8;margin-bottom:0.5rem;">
+        <span class="en">A 15-year-old travels across five continents. Interviews with stars, philosophers, scientists, athletes, artists, entrepreneurs. Records their voices. Each person is asked one question:</span>
+        <span class="ru">Мальчик 15 лет путешествует по пяти континентам. Интервью со звёздами, философами, учёными, спортсменами, художниками, бизнесменами. Записывает их голоса. Каждому — один вопрос:</span>
+      </p>
+      <div class="film-quote">
+        <span class="en">"Can one person who had an idea to unite humanity — change the world?"</span>
+        <span class="ru">«Может ли один человек, которому пришла в голову идея объединить человечество — изменить мир?»</span>
+      </div>
+    </div>
+
+    <div class="film-pillars reveal">
+      <div class="film-pillar">
+        <div class="pillar-icon">&#127760;</div>
+        <h4>Distribution</h4>
+        <p><span class="en">30 guests &times; 5M followers = 150M organic reach. Free.</span><span class="ru">30 гостей &times; 5M подписчиков = 150M охват. Бесплатно.</span></p>
+      </div>
+      <div class="film-pillar">
+        <div class="pillar-icon">&#11088;</div>
+        <h4><span class="en">Legitimacy</span><span class="ru">Легитимность</span></h4>
+        <p><span class="en">Film festivals = PR for years ahead. Cultural credibility at global scale.</span><span class="ru">Кинофестивали = PR на годы вперёд. Культурная легитимность глобального масштаба.</span></p>
+      </div>
+      <div class="film-pillar">
+        <div class="pillar-icon">&#128587;</div>
+        <h4><span class="en">Narrative</span><span class="ru">Нарратив</span></h4>
+        <p><span class="en">15 years of journey + profound questions = a viral story that tells itself.</span><span class="ru">15 лет пути + глубокие вопросы = виральная история, которая рассказывает сама себя.</span></p>
+      </div>
+      <div class="film-pillar">
+        <div class="pillar-icon">&#127908;</div>
+        <h4><span class="en">Asset</span><span class="ru">Актив</span></h4>
+        <p><span class="en">Hundreds of content units. Exclusive. Patron. Netflix. A catalog that grows in value.</span><span class="ru">Сотни единиц контента. Эксклюзив. Patron. Netflix. Каталог, растущий в цене.</span></p>
+      </div>
+    </div>
+
+    <div class="callout gold reveal" style="margin-top:2rem;">
+      <h4><span class="en">Film + Artifact = One Story</span><span class="ru">Фильм + Артефакт = Одна история</span></h4>
+      <p><span class="en">The documentary is not a separate project. It is the making-of the artifact itself — a parallel creative layer that amplifies the story, gives it human faces, and creates a distribution engine that no advertising budget could match.</span><span class="ru">Документальный фильм — это не отдельный проект. Это создание самого артефакта — параллельный творческий слой, который усиливает историю, даёт ей человеческие лица и создаёт механизм дистрибуции, с которым не сравнится никакой рекламный бюджет.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
      UNDER THE HOOD — THE DEEPER MEANING
      ═══════════════════════════════════════════ -->
 <section id="hood" class="hood-reveal">
@@ -1098,11 +1192,21 @@ footer strong { color: var(--text-secondary); font-weight: 600; }
     </div>
 
     <div class="callout important reveal">
-      <h4><span class="en">Quick Win</span><span class="ru">Быстрый результат</span></h4>
-      <p><span class="en"><strong>6 weeks</strong> — from zero to working prototype. Voice fingerprinting live. AI aggregation demonstrated. Proof of concept in your hands.</span><span class="ru"><strong>6 недель</strong> — от нуля до рабочего прототипа. Голосовое снятие отпечатков работает. AI-агрегация продемонстрирована. Прототип у вас в руках.</span></p>
+      <h4><span class="en">In Motion Since October 2025</span><span class="ru">В движении с октября 2025</span></h4>
+      <p><span class="en">This is not a cold start. Since October 2025, the team has been deep in research, architecture design, algorithm prototyping, and stakeholder alignment. <strong>February 2026</strong> is when we shift from design to engineering. The foundation is already laid.</span><span class="ru">Это не старт с нуля. С октября 2025 команда углублённо работала над исследованиями, проектированием архитектуры, прототипированием алгоритмов и согласованием со стейкхолдерами. <strong>Февраль 2026</strong> — это момент перехода от проектирования к инженерии. Фундамент уже заложен.</span></p>
     </div>
 
     <div class="roadmap-grid reveal">
+      <div class="roadmap-card" style="border-color:var(--gold-muted);">
+        <div class="roadmap-phase" style="color:var(--gold);"><span class="en">Phase 0 · Research & Design</span><span class="ru">Фаза 0 · Исследования и дизайн</span></div>
+        <h4><span class="en">Oct 2025 – Jan 2026</span><span class="ru">Окт 2025 – Янв 2026</span></h4>
+        <ul>
+          <li><span class="en">Algorithm research and prototyping</span><span class="ru">Исследование и прототипирование алгоритмов</span></li>
+          <li><span class="en">Architecture design and technical alignment</span><span class="ru">Проектирование архитектуры и техническое согласование</span></li>
+          <li><span class="en">Stakeholder vision workshops</span><span class="ru">Воркшопы с стейкхолдерами по видению</span></li>
+          <li><span class="en">Team assembly and role mapping</span><span class="ru">Формирование команды и распределение ролей</span></li>
+        </ul>
+      </div>
       <div class="roadmap-card active">
         <div class="roadmap-phase" style="color:var(--crimson-bright);"><span class="en">Phase 1 · Foundation</span><span class="ru">Фаза 1 · Фундамент</span></div>
         <h4><span class="en">Feb – Apr 2026</span><span class="ru">Фев – Апр 2026</span></h4>
@@ -1115,7 +1219,7 @@ footer strong { color: var(--text-secondary); font-weight: 600; }
         </ul>
       </div>
       <div class="roadmap-card">
-        <div class="roadmap-phase" style="color:var(--gold);"><span class="en">Phase 2 · Production</span><span class="ru">Фаза 2 · Продакшн</span></div>
+        <div class="roadmap-phase" style="color:var(--text-secondary);"><span class="en">Phase 2 · Production</span><span class="ru">Фаза 2 · Продакшн</span></div>
         <h4><span class="en">May – Jul 2026</span><span class="ru">Май – Июл 2026</span></h4>
         <ul>
           <li><span class="en">Production-quality song output</span><span class="ru">Песня продакшн-качества</span></li>
@@ -1130,9 +1234,9 @@ footer strong { color: var(--text-secondary); font-weight: 600; }
         <h4><span class="en">Post-MVP</span><span class="ru">После MVP</span></h4>
         <ul>
           <li><span class="en">GranatFest — 5 continents</span><span class="ru">GranatFest — 5 континентов</span></li>
+          <li><span class="en">Documentary film production</span><span class="ru">Производство документального фильма</span></li>
           <li><span class="en">Co-creator economy live</span><span class="ru">Экономика со-креаторов запущена</span></li>
           <li><span class="en">Architecture for a billion voices</span><span class="ru">Архитектура на миллиард голосов</span></li>
-          <li><span class="en">UPI distribution mechanism</span><span class="ru">Механизм распределения UPI</span></li>
           <li><span class="en">Global community launch</span><span class="ru">Запуск глобального сообщества</span></li>
         </ul>
       </div>
